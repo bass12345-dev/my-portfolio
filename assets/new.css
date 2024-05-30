@@ -6,6 +6,9 @@
     --gray: #2c2d2e;
     
 }
+h2 {
+    color: #fff;
+}
 
 .gradient-text-blue {
     background: linear-gradient(#9ae8f8, #99ffff,   #fff);
@@ -27,10 +30,16 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+  }
+
 body {
     background-image: linear-gradient(#000, #4c4c4c);
+    /* background-color: #000; */
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
+    
    
 }
 
@@ -45,7 +54,9 @@ body {
     top: 0;
     width: 100%;
     padding: 20px; 
+    z-index: 999;
 }
+
   
 
 .navbar-box {
@@ -200,7 +211,7 @@ ABOUT ME */
     flex-direction: row;
     justify-content: center;
 	align-items: center;
-    margin-top: 80px;
+    margin-top: 100px;
     gap: 25px;
 
 }
@@ -264,6 +275,8 @@ ABOUT ME */
     border-left: 12px solid var(--red);
 }
 
+
+
 .timeline-column .timeline-box::before {
     content: '';
     position: absolute;
@@ -308,6 +321,11 @@ ABOUT ME */
         font-size: 15px;
     }
     
+.tech_stack1 p:hover { 
+    color: var(--red);
+        
+    }
+
 .soft_skills {
         margin-top: 50px;
     }
@@ -324,7 +342,7 @@ ABOUT ME */
 .soft span {
         color: #000;
         font-size: 15px;
-        margin: 2px;
+        margin: 3px;
         background-color: #fff;
         border-radius: 50px;
         padding: 5px;
@@ -332,6 +350,86 @@ ABOUT ME */
         text-align: center;
     }
 
+
+    /* PROJECTS */
+    
+.projects_section {
+        margin-top: 100px;
+}
+
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+ 
+ }
+ 
+    
+.cpesd-project{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    color: #fff;
+
+}
+
+.cpesd-project .cpesd-title {
+    font-size: 21px;
+   
+}
+
+.cpesd-project p {
+    margin-top: 25px;
+}
+
+
+
+
+.right-projects {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    width: 400px;
+    
+}
+
+.project {
+    width: 100%;
+}
+
+.project-img {
+    width: 100%;
+}
+
+
+.project h1 {
+    color: #fff;
+}
+
+
+
+
+
+
+
+.project-logo  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.project-logo img {
+    height: 35px;
+    margin-right: 20px;
+   
+
+}
 
 /* CONTACTS */
 .contacts {
@@ -376,12 +474,11 @@ ABOUT ME */
     color: #fff;
 }
 
-@media screen and (max-width:896px) and (min-width:300px) {
 
-    /* NAVBAR */
-    .menu {
-        display: none;
-    }
+
+@media screen and (max-width:896px) and (min-width:290px) {
+
+
 
     .contact, .toggle-icon {
         display: block;
@@ -414,10 +511,89 @@ ABOUT ME */
     }
 
     /* PROJECTS */
- 
+    
 
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+
+
+    .cpesd-project {
+        width: 400px;
+       
+    }
+
+
+    .left-projects {
+        margin-bottom: 50px;
+    }
+
+  
 
     .contact-box {
         display: grid;
     }
+
+        /* NAVBAR */
+    .menu {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .show a {
+
+        color: #000;
+    }
+
+    
+
+
+
+    .show {
+        position: fixed;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        top: 0;
+        right: 0;
+        opacity: 0.5;
+
+        
+
+    }
+
+
+
+    .show li::after {
+        content: '';
+    }
+
+
+    .show li {
+ 
+        margin-left: 50%;
+        display: block;
+        
+
+    }
+
+    .show a {
+        font-size: 20px;
+    }
+
+    .show :nth-child(1) {
+        margin-top: 100px;
+    }
+
+    .toggle-icon :nth-child(2) {
+        display: none;
+    }
+
 }

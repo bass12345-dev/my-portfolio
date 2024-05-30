@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,20 +36,23 @@
               />
              
             </div>
-            <ul class="menu">
-              <li><a href="#home"  class="active">About</a></li>
-              <li><a href="#home">Skills</a></li>
-              <li><a href="#home">Projects</a></li>
+           
+            <ul class="menu" id="menu" >
+              <li><a href="#about"  class="active">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
               
             </ul>
+        
             <div class="contact">
                 <a href="">Contact</a>
             </div>
 
             <div></div>
           </div>
-          <div class="toggle-icon">
-            <i class="fa fa-bars"></i>
+          <div class="toggle-icon" id="toggle-icon">
+            <i class="fa fa-bars" id="open"></i>
+           
         </div>
         </div>
       </nav>
@@ -70,7 +74,7 @@
       </div>
 
 
-      <div class="about">
+      <div class="about" id="about">
         <div class="left-about">
             <div class="about-box">
                 <h1>About me</h1>
@@ -125,7 +129,7 @@
           </div>
       </div>
 
-      <div class="skilss">
+      <div class="skilss" id="skills">
         <div class="title">
             <h1 class="gradient-text-blue lar">SKILLS</h1>
           </div>
@@ -190,6 +194,120 @@
       </div>
 
 
+      <div class="projects_section" id="projects">
+        <div class="title">
+          <h1 class="gradient-text-blue lar">PROJECTS</h1>
+        </div>
+        <div class="projects">
+          <div class="left-projects">
+            <div class="project">
+              <div class="cpesd-project">
+                <div class="title">
+                  <h1 class="cpesd-title">
+                    CPESD MANAGEMENT INFORMATION SYSTEM
+                  </h1>
+                </div>
+                <img class="cpesd-img" src="assets/cpesd.png" />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur a dipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="right-projects">
+            <div class="project">
+              <div class="title">
+                <h2>Document Tracking System</h2>
+              </div>
+              <img class="project-img" class="cpesd-img" src="assets/dts.png" />
+              <div class="project-logo">
+                <img src="assets/laravel.png" />
+                <img src="assets/jquery.png" />
+                <img src="assets/boots.png" />
+                <img src="assets/mysql.png" />
+                <img src="assets/html5.png" />
+                <img src="assets/css3.png" />
+              </div>
+            </div>
+            <div class="project">
+              <div class="title">
+                <h2>PMAS/RFA</h2>
+              </div>
+              <img class="project-img" src="assets/pmas.png" />
+              <div class="project-logo">
+                <img src="assets/codeigniter.png" />
+                <img src="assets/jquery.png" />
+                <img src="assets/boots.png" />
+                <img src="assets/mysql.png" />
+                <img src="assets/html5.png" />
+                <img src="assets/css3.png" />
+              </div>
+            </div>
+            <div class="project">
+              <div class="title">
+                <h2>Watchlisted</h2>
+              </div>
+              <img class="project-img" src="assets/watchlisted.png" />
+              <div class="project-logo">
+                <img src="assets/laravel.png" />
+                <img src="assets/jquery.png" />
+                <img src="assets/boots.png" />
+                <img src="assets/mysql.png" />
+                <img src="assets/html5.png" />
+                <img src="assets/css3.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+   
+      </div>
+
+      <div class="projects_section">
+        <div class="projects">
+          <div class="left-projects">
+            <div class="project">
+              <div class="cpesd-project">
+                <div class="title">
+                  <h1>USTAP</h1>
+                </div>
+                <img class="cpesd-img" src="assets/ustap.png" />
+                <div class="project-logo">
+                    <img src="assets/codeigniter.png" />
+                    <img src="assets/jquery.png" />
+                    <img src="assets/boots.png" />
+                    <img src="assets/mysql.png" />
+                    <img src="assets/html5.png" />
+                    <img src="assets/css3.png" />
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-projects">
+            <div class="project">
+              <div class="cpesd-project">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur a dipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <div class="contacts">
         <div class="title">
@@ -232,4 +350,17 @@
 
     </main>
   </body>
+
+  <script>
+    document.querySelector('.toggle-icon').onclick = function() {
+      var element = document.getElementById("menu");
+      element.classList.toggle("show");
+      var element1 = document.getElementById("open");
+      element1.classList.toggle("fa-close");
+    }
+
+
+
+  </script>
+
 </html>
